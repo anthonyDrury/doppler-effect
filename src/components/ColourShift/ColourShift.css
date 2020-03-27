@@ -1,0 +1,8 @@
+.colourShift {
+  display: flex;
+  justify-content: center;
+}
+
+.colourShift__maskImage {
+  opacity: 0;
+}

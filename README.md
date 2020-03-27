@@ -1,13 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is designed to help illustrate the doppler effect and its changes to an objects colours with different velocities.
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+This project was developed for an interview challenge.
 
-### `npm start`
+I decided to use React (create-react-app) due to its quick development time, easy integration with Typescript and testing, as well as personal familiarity.
+
+This project would be simple enough as a plain JS file, though less opportunities to display personal development strengths.
+
+## Pitfalls
+
+If more development time was pursued, then a few things could have been improved:
+
+Much greater test coverage, acquiring full test coverage as well as the addition of e2e testing would be beneficial.
+
+Support for IE and older browsers. This could have been added as a simple backgroundColor change instead of using the CSS mask (which IE does not support). However I wanted to only shift the colour image and leave the whitespace as is, using the not fully supported mask was a nice way of displaying this. However if it were to be productionised, then a fallthrough would be added.
+
+Greater designs, accessibility and added teaching feedback. All would be beneficial and I would think increase student attention.
+
+The exponential growth of the sliders on velocity was decided on due to its range in displaying colours, with added research the exact formula for the detail change during blue/redshift could be found. Similar with the exact formula of colour shift in relation to velocity.
+
+## Getting started
+
+This is a simple react project, to get it started you should clone the project locally, navigate to it in a terminal, and run:
+
+### `npm i && npm start`
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`npm i &&` can be excluded on subsequent runs.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
@@ -15,7 +36,7 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I have added a few simple tests, ideally this would have much larger coverage.
 
 ### `npm run build`
 
@@ -26,19 +47,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

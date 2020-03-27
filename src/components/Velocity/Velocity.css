@@ -1,0 +1,31 @@
+.velocity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 45rem;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border: 1px solid #f4f4f4;
+}
+
+.velocity__label {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.velocity__numberInput {
+  margin-right: 0.5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  height: 4rem;
+  text-align: center;
+}
+
+/* .velocity__sliderInput {
+  margin-right: 0.5rem;
+  width: 10rem;
+  font-size: 1.5rem;
+  height: 4rem;
+  text-align: center; */
+/* } */

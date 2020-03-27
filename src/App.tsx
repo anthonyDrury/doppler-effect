@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Velocity from "./components/Velocity/Velocity";
+import { velocityState } from "./common/types";
+import ColourShift from "./components/ColourShift/ColourShift";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+class App extends React.Component<{}, velocityState> {
+  constructor(props: {}) {
+    super(props);
+    this.state = { velocity: 0 };
+  }
+
+  render() {
+    return (
+      <div data-testid="doppler-effect" className="dopplerEffect">
+        <ColourShift velocity={this.state.velocity} />
+        <Velocity
+          onVelocityChange={(velocity: number) => {
+            this.setState({ velocity });
+          }}
+        />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Have a play around with adjusting the velocity, hints will appear as
+          you give it a go. <br />
+          There is more detail observable during the blueshift, hence the
+          exponential growth on the slider.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <p hidden={!(this.state.velocity > 0)}>
+          As the velocity increases away from the observer, the colour shifts
+          towards the red. <br />
+          This is called redshift.
+        </p>
+        <p hidden={!(this.state.velocity < 0)}>
+          As the velocity increases towards the observer, the colour shifts to
+          the blue scale.
+          <br /> This is called blueshift.
+        </p>
+        <p></p>
+      </div>
+    );
+  }
 }
 
 export default App;
