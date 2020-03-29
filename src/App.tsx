@@ -3,6 +3,7 @@ import "./App.css";
 import Velocity from "./components/Velocity/Velocity";
 import { velocityState } from "./common/types";
 import ColourShift from "./components/ColourShift/ColourShift";
+import AboutOverlay from "./components/AboutOverlay/AboutOverlay";
 
 class App extends React.Component<{}, velocityState> {
   constructor(props: {}) {
@@ -13,7 +14,11 @@ class App extends React.Component<{}, velocityState> {
   render() {
     return (
       <div data-testid="doppler-effect" className="dopplerEffect">
-        <ColourShift velocity={this.state.velocity} />
+        <AboutOverlay />
+        <ColourShift
+          data-testid="colour-shift"
+          velocity={this.state.velocity}
+        />
         <Velocity
           onVelocityChange={(velocity: number) => {
             this.setState({ velocity });
@@ -35,7 +40,6 @@ class App extends React.Component<{}, velocityState> {
           the blue scale.
           <br /> This is called blueshift.
         </p>
-        <p></p>
       </div>
     );
   }

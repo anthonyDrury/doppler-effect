@@ -12,6 +12,7 @@
 .velocity__label {
   font-size: 2rem;
   margin-right: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .velocity__numberInput {
@@ -20,12 +21,6 @@
   font-size: 1.5rem;
   height: 4rem;
   text-align: center;
+  border: none;
+  border-radius: 0.25rem;
 }
-
-/* .velocity__sliderInput {
-  margin-right: 0.5rem;
-  width: 10rem;
-  font-size: 1.5rem;
-  height: 4rem;
-  text-align: center; */
-/* } */

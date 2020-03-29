@@ -13,7 +13,7 @@ class Velocity extends React.Component<velocityProps, velocityState> {
 
   private onVelocityChange(velocity: number): void {
     this.setState({ velocity }, () => {
-      this.props.onVelocityChange(this.state.velocity);
+      this.props.onVelocityChange(Number(this.state.velocity.toFixed(2)));
     });
   }
 
@@ -31,6 +31,7 @@ class Velocity extends React.Component<velocityProps, velocityState> {
           className="velocity__numberInput"
           id="velocityNum"
           type="number"
+          data-testid="numInput"
           value={this.state.velocity.toFixed(2)}
           min="-100"
           max="100"
@@ -38,10 +39,11 @@ class Velocity extends React.Component<velocityProps, velocityState> {
         />
         <input
           className="velocity__sliderInput"
+          data-testid="sliderInput"
           id="velocitySlider"
           type="range"
           min="0"
-          max="382.55"
+          max="382.551"
           value={Math.log2(this.state.velocity + 101) * 50}
           onChange={e => this.onSliderChange(e.target.valueAsNumber)}
           step={0.001}

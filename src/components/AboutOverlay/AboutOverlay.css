@@ -1,0 +1,24 @@
+.aboutOverlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  margin-top: 0.5rem;
+}
+
+.aboutOverlay__inner {
+  border: 1px solid white;
+}
+
+.aboutOverlay__info {
+  text-align: right;
+}
+
+.aboutOverlay__infoButton {
+  margin: 1rem;
+}

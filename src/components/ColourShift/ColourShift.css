@@ -1,6 +1,7 @@
 .colourShift {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .colourShift__maskImage {

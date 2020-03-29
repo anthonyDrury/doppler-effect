@@ -6,19 +6,21 @@ This project was developed for an interview challenge.
 
 I decided to use React (create-react-app) due to its quick development time, easy integration with Typescript and testing, as well as personal familiarity.
 
-This project would be simple enough as a plain JS file, though less opportunities to display personal development strengths.
+This project would be simple enough as a plain JS file, though less opportunities to display personal strengths.
 
 ## Pitfalls
 
 If more development time was pursued, then a few things could have been improved:
 
-Much greater test coverage, acquiring full test coverage as well as the addition of e2e testing would be beneficial.
+Greater test implementation, e2e tests simulating an expected user experience. Though I have added tests for all user interactions and most elements.
 
 Support for IE and older browsers. This could have been added as a simple backgroundColor change instead of using the CSS mask (which IE does not support). However I wanted to only shift the colour image and leave the whitespace as is, using the not fully supported mask was a nice way of displaying this. However if it were to be productionised, then a fallthrough would be added.
 
 Greater designs, accessibility and added teaching feedback. All would be beneficial and I would think increase student attention.
 
 The exponential growth of the sliders on velocity was decided on due to its range in displaying colours, with added research the exact formula for the detail change during blue/redshift could be found. Similar with the exact formula of colour shift in relation to velocity.
+
+CI, SASS and other tooling to assist further development would be beneficial for maintainability.
 
 ## Getting started
 

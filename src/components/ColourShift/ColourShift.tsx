@@ -6,6 +6,8 @@ function ColourShift(props: velocityState) {
   const maskStyle: CSSProperties = {
     WebkitMaskImage: "url('star-small.png')",
     WebkitMaskRepeat: "no-repeat",
+    WebkitMaskSize: "contain",
+    maskSize: "contain",
     maskImage: "url('star-small.png')",
     maskRepeat: "no-repeat",
     position: "absolute",
@@ -16,14 +18,16 @@ function ColourShift(props: velocityState) {
   };
   return (
     <div data-testid="colourShift" className="colourShift">
-      <div style={maskStyle}>
+      <div data-testid="mask" style={maskStyle}>
+        {/* star image used to ascertain correct size for mask  */}
         <img
           className="colourShift__maskImage"
           src="star-small.png"
+          data-testid="maskImage"
           alt=""
         ></img>
       </div>
-      <img src="star-small.png" alt="star"></img>
+      <img src="star-small.png" data-testid="star" alt="star"></img>
     </div>
   );
 }
