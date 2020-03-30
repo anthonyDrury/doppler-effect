@@ -8,24 +8,19 @@ configure({ adapter: new Adapter() });
 
 test("should render AboutOverlay", () => {
   const { getByTestId } = render(<AboutOverlay />);
-  const aboutOverlay = getByTestId("aboutOverlay");
+  const aboutOverlay = getByTestId("about-overlay");
   expect(aboutOverlay).toBeInTheDocument();
 });
 
 test("should hide AboutOverlay, then redisplay", async () => {
   const aboutOverlay = shallow(<AboutOverlay />);
-  aboutOverlay.find("[data-testid='hideOverlay']").simulate("click");
+  aboutOverlay.find("[data-testid='hide-overlay']").simulate("click");
 
-  await new Promise(res =>
-    setTimeout(() => {
-      expect(aboutOverlay.contains('[data-testid="aboutOverlay"]')).toBeFalsy;
-      expect(aboutOverlay.contains('[data-testid="showOverlay"]')).toBeFalsy;
+  expect(aboutOverlay.contains('[data-testid="about-overlay"]')).toBeFalsy;
+  expect(aboutOverlay.contains('[data-testid="show-overlay"]')).toBeFalsy;
 
-      const showOverlay = aboutOverlay.find('[data-testid="showOverlay"]');
-      showOverlay.simulate("click");
+  const showOverlay = aboutOverlay.find('[data-testid="show-overlay"]');
+  showOverlay.simulate("click");
 
-      expect(aboutOverlay.contains('[data-testid="showOverlay"]')).toBeFalsy();
-      res();
-    }, 3000)
-  );
+  expect(aboutOverlay.contains('[data-testid="show-overlay"]')).toBeFalsy();
 });
